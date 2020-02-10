@@ -1,4 +1,4 @@
-# BestShop-landing-page
+# BestShop landing page
 Landing page template (in progress)
 
 Next steps:
