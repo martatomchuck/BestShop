@@ -1,5 +1,5 @@
 # BestShop landing page
-Landing page template prepared with mobile first approach basing on the project:
+Landing page template prepared basing on the project:
 https://xd.adobe.com/spec/3e12f9b5-11e7-4d9a-6a6b-e78b20d2a5a6-4823/grid
 
 ----
