@@ -365,9 +365,72 @@ input, select {
   transition: width 1s ease;
 }
 
-#benefits-page .box-image {
+#benefits-page .box:hover .macbook::after {
+  transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+  transition: all 1s ease-in-out;
+}
+
+#benefits-page .box:hover .iphone::after {
+  border-radius: 42% 58% 63% 37% / 42% 36% 64% 58%;
+  transition: all 900ms ease-in-out;
+}
+
+#benefits-page .iphone {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+  z-index: 999;
+}
+
+#benefits-page .iphone img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  max-width: 40%;
+}
+
+#benefits-page .iphone::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #08A6E4;
+  position: relative;
+  z-index: -1;
+  left: -340px;
+  bottom: 10px;
+  transition: all 900ms ease-in-out;
+}
+
+#benefits-page .macbook {
+  position: relative;
   display: flex;
   justify-content: center;
+  padding-top: 20px;
+  z-index: 999;
+}
+
+#benefits-page .macbook img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+}
+
+#benefits-page .macbook::after {
+  content: "";
+  display: block;
+  width: 12em;
+  height: 12em;
+  border-radius: 41px;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  background-color: #FB3B64;
+  position: absolute;
+  top: -40px;
+  right: 120px;
+  z-index: -1;
+  transition: all 900ms ease-in-out;
 }
 
 #benefits-page .box-text {
@@ -423,18 +486,30 @@ input, select {
   transition: transform 0.4s ease;
 }
 
+#benefits-page .box-container:hover span::after {
+  width: 350px;
+  transition: width 1s ease;
+}
+
 #benefits-page .picture {
   width: 540px;
   height: 370px;
+  padding-top: 60px;
   background-color: #55DFB4;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
   margin: 30px 0;
-  padding-top: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.4s ease;
+}
+
+#benefits-page .picture img {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  max-width: 70%;
 }
 
 #pricing {

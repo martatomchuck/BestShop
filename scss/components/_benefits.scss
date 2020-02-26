@@ -31,11 +31,71 @@
             width: 350px;
             transition: width 1s ease;
         }
+
+        &:hover .macbook::after {
+            transform: matrix(0.71, -0.71, 0.71, 0.71, 0, 0);
+            transition: all 1s ease-in-out;
+        }
+
+        &:hover .iphone::after {
+            border-radius: 42% 58% 63% 37% / 42% 36% 64% 58% ;
+            transition: all 900ms ease-in-out;
+        }
     }
 
-    .box-image {
+    .iphone {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 20px;
+        z-index: 999;
+
+        img {
+            @include image(); 
+            max-width: 40%;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: $color-blue;
+            position: relative;
+            z-index: -1;
+            left: -340px;
+            bottom: 10px;
+            transition: all 900ms ease-in-out;
+        }
+    }
+
+
+    .macbook {
+        position: relative;
         display: flex;
         justify-content: center;
+        padding-top: 20px;
+        z-index: 999;
+
+        img {
+            @include image();
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 12em;
+            height: 12em;
+            border-radius: 41px;
+            transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+            background-color: $color-red;
+            position: absolute;
+            top: -40px;
+            right: 120px;
+            z-index: -1;
+            transition: all 900ms ease-in-out;
+        }
     }
 
     .box-text {
@@ -84,19 +144,29 @@
             transform: rotate(-7deg);
             transition: transform 0.4s ease;
         }
+
+        &:hover span::after {
+            width: 350px;
+            transition: width 1s ease;
+        }
     }
 
     .picture {
         width: 540px;
         height: 370px;
+        padding-top: 60px;
         background-color: #55DFB4;
         border: 1px solid $color-border;
         border-radius: 5px;
         margin: 30px 0;
-        padding-top: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
         transition: transform 0.4s ease;
+
+        img {
+            @include image();
+            max-width: 70%;
+        }
     }
 }
