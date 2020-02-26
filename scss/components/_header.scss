@@ -28,7 +28,7 @@
     display: flex;
 
     li {
-        margin-left: 95px;
+        margin-left: 75px;
 
         &:first-child {
             margin-left: 0;
@@ -66,6 +66,12 @@
             width: calc(100% + 20px);
             left: -10px;
         }
+    }
+}
+
+@media (max-width: 800px) {
+    .header-page nav ul {
+        flex-direction: column;
     }
 }
 

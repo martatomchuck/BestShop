@@ -1,0 +1,132 @@
+#contact-form .container {
+    max-width: 896px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+
+    div, form {
+        width: 49%;
+    }
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+
+    input[type=text] {
+        display: block;
+        width: 100%;
+        background: none;
+        outline: 0;
+        border: 0;
+        border-bottom: 1px solid $color-grey;
+        height: 40px;
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+        color: $color-blue;
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-family: 'Open sans', sans-serif;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 17px;
+        margin-bottom: 30px;
+        color: $color-grey-dark;
+    }
+
+    a {
+        @include button($color-blue);
+        align-self: flex-end;
+        margin-bottom: 100px;
+    }
+}
+
+::placeholder {
+    height: 40px;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    color: $color-grey;
+    transition: all 500ms ease;
+}
+
+#contact-form label[for=name],
+#contact-form label[for=e-mail] {
+    color: $color-blue;
+    text-transform: uppercase;
+    font-family: 'Open sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* STYLOWANIE CHECKBOXA */
+label[for=consent] {
+    padding-left: 34px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: '';
+        display: block;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 1px solid $color-grey-dark;
+        border-radius: 4px;
+        opacity: 1;
+        width: 24px;
+        height: 24px;
+    } 
+}
+
+#consent {
+    display: none;
+
+    &:checked ~ label[for=consent]::before {
+        background: #FFFFFF no-repeat center center url("../assets/Checkmark-form.svg") ;
+    } 
+}
+
+#contact-form .questions {
+    h5 {
+        margin-bottom: 30px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 46px;
+        font-weight: 400;
+    }
+
+    p:first-of-type {
+        @include paragraph();
+        margin-bottom: 50px;
+    }
+}
+
+#contact-form #contact {
+    display: flex;
+    width: 100%;
+
+    div {
+        color: $color-grey-light;
+        font-size: 16px;
+        font-weight: 600;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+
+        &:first-child::before {
+            content: url("../assets/MailIcon.svg");
+            margin-right: 10px;
+            align-items: center;
+        }
+
+        &:last-child::before {
+            content: url("../assets/PhoneIcon.svg");
+            margin-right: 10px;
+            align-items: center;
+        }
+    }
+}

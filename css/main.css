@@ -131,7 +131,7 @@ input, select {
 }
 
 .header-page nav ul li {
-  margin-left: 95px;
+  margin-left: 75px;
 }
 
 .header-page nav ul li:first-child {
@@ -169,6 +169,12 @@ input, select {
 .header-page nav ul a:hover::before {
   width: calc(100% + 20px);
   left: -10px;
+}
+
+@media (max-width: 800px) {
+  .header-page nav ul {
+    flex-direction: column;
+  }
 }
 
 #banner-page {
@@ -211,6 +217,8 @@ input, select {
   font-weight: 400;
   color: black;
   margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
 }
 
 #banner-page .banner-details a {
@@ -230,7 +238,6 @@ input, select {
   opacity: 1;
   cursor: pointer;
   transition: all 0.6s ease;
-  width: 400px;
   margin-top: 40px;
   line-height: 70px;
 }
@@ -242,6 +249,12 @@ input, select {
   background-color: #0084C0;
   background-color: #0794cb;
   box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
+}
+
+@media (min-width: 800px) {
+  #banner-page .banner-details a {
+    width: 400px;
+  }
 }
 
 #statistics-page {
@@ -536,6 +549,200 @@ input, select {
 .pricing-box .green:hover {
   box-shadow: 5px 10px 20px -10px #55DFB4;
   transition: box-shadow 0.5s ease;
+}
+
+#contact-form .container {
+  max-width: 896px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+}
+
+#contact-form .container div, #contact-form .container form {
+  width: 49%;
+}
+
+#contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form form input[type=text] {
+  display: block;
+  width: 100%;
+  background: none;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid #95989A;
+  height: 40px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  color: #08A6E4;
+  margin-bottom: 30px;
+}
+
+#contact-form form p {
+  font-family: 'Open sans', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 17px;
+  margin-bottom: 30px;
+  color: #707070;
+}
+
+#contact-form form a {
+  display: inline-block;
+  padding: 0 70px;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  border-radius: 35px;
+  border: 0;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  align-self: flex-end;
+  margin-bottom: 100px;
+}
+
+#contact-form form a:hover {
+  transition: all 0.6s ease;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
+  transform: translateY(-0.25em);
+  background-color: #0084C0;
+  background-color: #0794cb;
+  box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
+}
+
+::-webkit-input-placeholder {
+  height: 40px;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  color: #95989A;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+::-moz-placeholder {
+  height: 40px;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  color: #95989A;
+  -moz-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+:-ms-input-placeholder {
+  height: 40px;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  color: #95989A;
+  -ms-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+::-ms-input-placeholder {
+  height: 40px;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  color: #95989A;
+  -ms-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+::placeholder {
+  height: 40px;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  color: #95989A;
+  transition: all 500ms ease;
+}
+
+#contact-form label[for=name],
+#contact-form label[for=e-mail] {
+  color: #08A6E4;
+  text-transform: uppercase;
+  font-family: 'Open sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* STYLOWANIE CHECKBOXA */
+label[for=consent] {
+  padding-left: 34px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+label[for=consent]::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  display: block;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  opacity: 1;
+  width: 24px;
+  height: 24px;
+}
+
+#consent {
+  display: none;
+}
+
+#consent:checked ~ label[for=consent]::before {
+  background: #FFFFFF no-repeat center center url("../assets/Checkmark-form.svg");
+}
+
+#contact-form .questions h5 {
+  margin-bottom: 30px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+}
+
+#contact-form .questions p:first-of-type {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 50px;
+}
+
+#contact-form #contact {
+  display: flex;
+  width: 100%;
+}
+
+#contact-form #contact div {
+  color: #A5A5A5;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#contact-form #contact div:first-child::before {
+  content: url("../assets/MailIcon.svg");
+  margin-right: 10px;
+  align-items: center;
+}
+
+#contact-form #contact div:last-child::before {
+  content: url("../assets/PhoneIcon.svg");
+  margin-right: 10px;
+  align-items: center;
 }
 
 #footer-page {
