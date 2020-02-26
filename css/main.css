@@ -1,0 +1,618 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+.header-page {
+  background-color: white;
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 3px 6px #00000029;
+  transition: box-shadow 1s ease;
+}
+
+.header-page .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.header-page h1 a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #08A6E4;
+  text-align: left;
+}
+
+.header-page nav ul {
+  display: flex;
+}
+
+.header-page nav ul li {
+  margin-left: 95px;
+}
+
+.header-page nav ul li:first-child {
+  margin-left: 0;
+}
+
+.header-page nav ul a {
+  font: Bold 11px/15px 'Open Sans', sans-serif;
+  letter-spacing: 3.28px;
+  color: #A5A5A5;
+  text-transform: uppercase;
+  line-height: 70px;
+  display: block;
+  position: relative;
+  transition: color 0.8s ease 0.1s;
+}
+
+.header-page nav ul a:hover {
+  color: black;
+  transition: color 0.8s ease 0.1s;
+}
+
+.header-page nav ul a::before {
+  content: '';
+  display: block;
+  background: #08A6E4;
+  height: 4px;
+  width: 0;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transition: all 500ms ease-in-out;
+}
+
+.header-page nav ul a:hover::before {
+  width: calc(100% + 20px);
+  left: -10px;
+}
+
+#banner-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff url("../assets/office-white.png") no-repeat center top fixed;
+  background-size: cover;
+}
+
+#banner-page::before {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+#banner-page .banner-details {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#banner-page .banner-details h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 49px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #000000;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+#banner-page .banner-details p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin-top: 20px;
+}
+
+#banner-page .banner-details a {
+  display: inline-block;
+  padding: 0 70px;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  border-radius: 35px;
+  border: 0;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  width: 400px;
+  margin-top: 40px;
+  line-height: 70px;
+}
+
+#banner-page .banner-details a:hover {
+  transition: all 0.6s ease;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
+  transform: translateY(-0.25em);
+  background-color: #0084C0;
+  background-color: #0794cb;
+  box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
+}
+
+#statistics-page {
+  height: 431px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+#statistics-page h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+.statistics-details {
+  display: flex;
+  justify-content: center;
+}
+
+.statistics-details .box {
+  width: 176px;
+  height: 167px;
+  margin: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statistics-details .box h3 {
+  text-align: center;
+  font: ExtraBold 20px/24px 'Raleway', sans-serif;
+  letter-spacing: 6px;
+  color: #000000;
+  padding: 20px;
+}
+
+.statistics-details .box p {
+  text-align: center;
+  font: Regular 17px/20px 'Raleway', sans-serif;
+  letter-spacing: 0;
+  color: #A5A5A5;
+}
+
+.statistics-details .box > div {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.statistics-details .box .person {
+  background-color: #FB3B64;
+}
+
+.statistics-details .box .eye {
+  background-color: #08A6E4;
+}
+
+.statistics-details .box .catalog {
+  background-color: #55DFB4;
+}
+
+.statistics-details .box img {
+  position: absolute;
+  left: 30px;
+  max-width: 100%;
+}
+
+#pricing {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#pricing h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 100px 0 50px 0;
+}
+
+.pricing-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pricing-box .box {
+  border-radius: 18px;
+  width: 372px;
+  height: 500px;
+  margin: 30px;
+  transition: box-shadow 0.8s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.pricing-box .box h3 {
+  font: Bold 21px/1px 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  margin: 15px 0 40px 0;
+}
+
+.pricing-box .box h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 46px;
+  margin-bottom: 50px;
+}
+
+.pricing-box .box li {
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  text-align: center;
+}
+
+.pricing-box .box li::before {
+  content: url(../assets/Ckechmark-1.svg);
+  margin-right: 10px;
+}
+
+.pricing-box .box .close::before {
+  content: url(../assets/Close.svg);
+  margin-right: 10px;
+}
+
+.pricing-box .red {
+  border: 1px solid #FB3B64;
+}
+
+.pricing-box .red h4 {
+  color: #FB3B64;
+  margin-bottom: 70px;
+}
+
+.pricing-box .red a {
+  display: inline-block;
+  padding: 0 70px;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  background-color: #FB3B64;
+  box-shadow: 5px 10px 14px rgba(154, 3, 35, 0.5);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  border-radius: 35px;
+  border: 0;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  position: absolute;
+  top: calc(500px - 30px);
+}
+
+.pricing-box .red a:hover {
+  transition: all 0.6s ease;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
+  transform: translateY(-0.25em);
+  background-color: #0084C0;
+  background-color: #fa2250;
+  box-shadow: 5px 10px 14px rgba(154, 3, 35, 0.5);
+}
+
+.pricing-box .red:hover {
+  box-shadow: 5px 10px 20px -10px #FB3B64;
+  transition: box-shadow 0.5s ease;
+}
+
+.pricing-box .blue {
+  border: 1px solid #08A6E4;
+  flex-grow: 1.5;
+  height: 540px;
+}
+
+.pricing-box .blue h3 {
+  margin-top: 5px;
+}
+
+.pricing-box .blue h4 {
+  color: #08A6E4;
+}
+
+.pricing-box .blue h4::after {
+  content: "Limited offer";
+  display: block;
+  color: #13253B;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pricing-box .blue a {
+  display: inline-block;
+  padding: 0 70px;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  border-radius: 35px;
+  border: 0;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  position: absolute;
+  top: calc(540px - 30px);
+}
+
+.pricing-box .blue a:hover {
+  transition: all 0.6s ease;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
+  transform: translateY(-0.25em);
+  background-color: #0084C0;
+  background-color: #0794cb;
+  box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
+}
+
+.pricing-box .blue:hover {
+  box-shadow: 5px 10px 20px -10px #08A6E4;
+  transition: box-shadow 0.5s ease;
+}
+
+.pricing-box .green {
+  border: 1px solid #55DFB4;
+}
+
+.pricing-box .green h4 {
+  color: #55DFB4;
+}
+
+.pricing-box .green h4::after {
+  content: "Limited offer";
+  display: block;
+  color: #13253B;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pricing-box .green a {
+  display: inline-block;
+  padding: 0 70px;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  background-color: #55DFB4;
+  box-shadow: 5px 10px 14px rgba(25, 130, 97, 0.5);
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  border-radius: 35px;
+  border: 0;
+  opacity: 1;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  position: absolute;
+  top: calc(500px - 30px);
+}
+
+.pricing-box .green a:hover {
+  transition: all 0.6s ease;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
+  transform: translateY(-0.25em);
+  background-color: #0084C0;
+  background-color: #40dbab;
+  box-shadow: 5px 10px 14px rgba(25, 130, 97, 0.5);
+}
+
+.pricing-box .green:hover {
+  box-shadow: 5px 10px 20px -10px #55DFB4;
+  transition: box-shadow 0.5s ease;
+}
+
+#footer-page {
+  background: #F7F7F7 0% 0% no-repeat padding-box;
+  box-shadow: 0px -5px 40px #00000029;
+  height: 89px;
+}
+
+#footer-page .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+#footer-page .copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#footer-page .copyright a {
+  text-decoration: none;
+  color: #08A6E4;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  display: block;
+  margin: 24px 0 10px 0;
+}
+
+#footer-page .copyright p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.7rem;
+  color: #A5A5A5;
+}
+
+#footer-page .social-media {
+  display: flex;
+}
+
+#footer-page .social-media ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+#footer-page .social-media li {
+  list-style: none;
+  margin-top: 25px;
+}
+
+#footer-page .social-media img {
+  display: block;
+  max-width: 100%;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  /* max-width, a nie widht - wtedy nie ma scrolla gdy zmniejszam ekran */
+  max-width: 1352px;
+  margin: 0 auto;
+  width: 95%;
+}
+
+body {
+  background-color: white;
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=main.css.map */

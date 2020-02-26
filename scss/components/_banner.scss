@@ -1,0 +1,46 @@
+#banner-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff url("../assets/office-white.png") no-repeat center top fixed;
+    background-size: cover;
+
+    &::before {
+        content: '';
+        height: 100vh;
+        width: 100%;
+        background: rgba(white, 0.4);
+        
+    }
+
+    .banner-details {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            font-family: 'Raleway', sans-serif;
+            font-size: 49px;
+            font-weight: 400;
+            letter-spacing: 0;
+            color: #000000;
+            padding: 10px;
+            text-transform: capitalize;
+        }
+
+        p {
+            @include paragraph();
+            margin-top: 20px;
+        }
+
+        a {
+            @include button($color-blue);
+            width: 400px;
+            margin-top: 40px;
+            line-height: 70px;
+        }
+    }
+}

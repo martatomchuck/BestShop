@@ -1,0 +1,71 @@
+#statistics-page {
+    height: 431px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+    h2 {
+        @include h2();
+        margin-bottom: 80px;
+    }
+}
+
+.statistics-details {
+    display: flex;
+    justify-content: center;
+    // align-items: flex-start;
+
+    .box {
+        width: 176px;
+        height: 167px;
+        margin: 0 100px;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-around;
+        align-items: center;
+
+        h3 {
+            text-align: center;
+            font: ExtraBold 20px/24px 'Raleway', sans-serif;
+            letter-spacing: 6px;
+            color: #000000;
+            padding: 20px;
+        }
+
+        p {
+            text-align: center;
+            font: Regular 17px/20px 'Raleway', sans-serif;
+            letter-spacing: 0;
+            color: #A5A5A5;
+        }
+
+        > div {
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .person {
+            background-color: $color-red;
+        }
+
+        .eye {
+            background-color: $color-blue;
+        }
+
+        .catalog {
+            background-color: $color-green;
+        }
+
+        img {
+            position: absolute;
+            left: 30px;
+            max-width: 100%;
+        }
+    }
+}

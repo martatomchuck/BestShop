@@ -1,0 +1,62 @@
+@mixin button($color) {
+    display: inline-block;
+    padding: 0 70px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    background-color: $color;
+    box-shadow: 5px 10px 14px rgba(darken($color, 30%), 0.5);
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    border-radius: 35px;
+    border: 0;
+    opacity: 1;
+    cursor: pointer;
+    transition: all 0.6s ease;
+
+    &:hover {
+        transition: all 0.6s ease;
+        box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
+        transform: translateY(-0.25em);
+        background-color: #0084C0;
+        background-color: darken($color, 5%);
+        box-shadow: 5px 10px 14px rgba(darken($color, 30%), 0.5);
+    }
+}
+
+@mixin image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+}
+
+@mixin h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+@mixin paragraph {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+
+@mixin limited {
+    content: "Limited offer";
+    display: block;
+    color: #13253B;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@mixin box-shadow($color) {
+    box-shadow: 5px 10px 20px -10px $color;
+    transition: box-shadow 0.5s ease;
+}

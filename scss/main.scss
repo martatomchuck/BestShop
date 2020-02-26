@@ -1,11 +1,35 @@
-@import 'reset';
 @import 'variables';
 @import 'mixins';
-@import 'header';
-@import 'banner';
-@import 'statistic';
-@import 'benefits';
-@import 'pricing';
-@import 'calculator';
-@import 'contact';
-@import 'footer';
+
+@import 'reset';
+
+@import 'components/header';
+@import 'components/banner';
+@import 'components/statistic';
+@import 'components/benefits';
+@import 'components/pricing';
+@import 'components/calculator';
+@import 'components/contact';
+@import 'components/footer';
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.container {
+    /* max-width, a nie widht - wtedy nie ma scrolla gdy zmniejszam ekran */
+    max-width: 1352px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+body {
+    background-color: white;
+    font-family: 'Raleway', 'Open Sans', sans-serif;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}

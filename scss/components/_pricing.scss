@@ -1,0 +1,133 @@
+#pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    h2 {
+        @include h2();
+        margin: 100px 0 50px 0;
+    }
+}
+
+.pricing-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .box {
+        border-radius: 18px;
+        width: 372px;
+        height: 500px;
+        margin: 30px;
+        transition: box-shadow 0.8s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        h3 {
+            font: Bold 21px/1px 'Raleway', sans-serif;
+            font-size: 1.5rem;
+            margin: 15px 0 40px 0;
+        }
+
+        h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 46px;
+            margin-bottom: 50px;
+        }
+
+        li {
+            margin-bottom: 30px;
+            font-size: 14px;
+            font-family: 'Open Sans', sans-serif;
+            list-style: none;
+            text-align: center;
+
+            &::before {
+                content: url(../assets/Ckechmark-1.svg);
+                margin-right: 10px;
+            }
+        }
+
+        .close::before {
+            content: url(../assets/Close.svg);
+            margin-right: 10px;
+        }
+    }
+}
+
+.pricing-box {
+    .red {
+        border: 1px solid $color-red;
+
+        h4 {
+            color: $color-red;
+            margin-bottom: 70px;
+        }
+
+        a {
+            @include button($color-red);
+            position: absolute;
+            top: calc(500px - 30px);
+        }
+
+        &:hover {
+            @include box-shadow($color-red);
+        }
+    }
+
+    .blue {
+        border: 1px solid $color-blue;
+        flex-grow: 1.5;
+        height: 540px;
+
+        h3 {
+            margin-top: 5px;
+        }
+
+        h4 {
+            color: $color-blue;
+
+            &::after {
+                @include limited();
+            }
+        }
+
+        a {
+            @include button($color-blue);
+            position: absolute;
+            top: calc(540px - 30px);
+        }
+
+        &:hover {
+            @include box-shadow($color-blue);
+        }
+
+    }
+
+    .green {
+        border: 1px solid $color-green;
+
+        h4 {
+            color: $color-green;
+
+            &::after {
+                @include limited();
+            }
+        }
+
+        a {
+            @include button($color-green);
+            position: absolute;
+            top: calc(500px - 30px);
+        }
+
+        &:hover {
+            @include box-shadow($color-green);
+        }
+    }
+}
