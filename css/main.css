@@ -329,6 +329,114 @@ input, select {
   max-width: 100%;
 }
 
+#benefits-page {
+  background-color: #F7F7F7;
+  width: 100%;
+}
+
+#benefits-page .container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+
+#benefits-page span::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  transition: width 1s ease;
+}
+
+#benefits-page .box {
+  height: 370px;
+  background-color: white;
+  margin: 20px 0;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#benefits-page .box:hover span::after {
+  width: 350px;
+  transition: width 1s ease;
+}
+
+#benefits-page .box-image {
+  display: flex;
+  justify-content: center;
+}
+
+#benefits-page .box-text {
+  margin: 40px;
+  width: 50%;
+}
+
+#benefits-page .box-text h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: left;
+}
+
+#benefits-page .box-text p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  padding: 40px 0;
+  line-height: 22px;
+}
+
+#benefits-page .box-text .line-red::after {
+  background-color: #FB3B64;
+}
+
+#benefits-page .box-text .line-blue::after {
+  background-color: #08A6E4;
+}
+
+#benefits-page .box-text .line-green::after {
+  background-color: #55DFB4;
+}
+
+#benefits-page .box-small {
+  margin: 30px 40px 30px 0;
+  width: calc(1352px - 540px - 40px);
+}
+
+#benefits-page .box-small .box-text {
+  flex-grow: 0.6;
+}
+
+#benefits-page .box-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#benefits-page .box-container:hover .picture {
+  transform: rotate(-7deg);
+  transition: transform 0.4s ease;
+}
+
+#benefits-page .picture {
+  width: 540px;
+  height: 370px;
+  background-color: #55DFB4;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  margin: 30px 0;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease;
+}
+
 #pricing {
   display: flex;
   flex-direction: column;
@@ -588,7 +696,7 @@ input, select {
   font-weight: normal;
   line-height: 17px;
   margin-bottom: 30px;
-  color: #707070;
+  color: #95989A;
 }
 
 #contact-form form a {
@@ -689,7 +797,7 @@ label[for=consent]::before {
   content: '';
   display: block;
   background: #FFFFFF 0% 0% no-repeat padding-box;
-  border: 1px solid #707070;
+  border: 1px solid #95989A;
   border-radius: 4px;
   opacity: 1;
   width: 24px;

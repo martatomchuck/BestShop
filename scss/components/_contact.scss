@@ -34,7 +34,7 @@
         font-weight: normal;
         line-height: 17px;
         margin-bottom: 30px;
-        color: $color-grey-dark;
+        color: $color-grey;
     }
 
     a {
@@ -75,7 +75,7 @@ label[for=consent] {
         content: '';
         display: block;
         background: #FFFFFF 0% 0% no-repeat padding-box;
-        border: 1px solid $color-grey-dark;
+        border: 1px solid $color-grey;
         border-radius: 4px;
         opacity: 1;
         width: 24px;

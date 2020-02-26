@@ -1,0 +1,102 @@
+#benefits-page {
+    background-color: #F7F7F7;
+    width: 100%;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 105px;
+        padding-bottom: 105px;
+    }
+
+    span::after {
+        content: "";
+        display: block;
+        height: 4px;
+        width: 0;
+        transition: width 1s ease;
+    }
+
+    .box {
+        height: 370px;
+        background-color: white;
+        margin: 20px 0;
+        border: 1px solid $color-border;
+        border-radius: 5px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &:hover span::after {
+            width: 350px;
+            transition: width 1s ease;
+        }
+    }
+
+    .box-image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .box-text {
+        margin: 40px;
+        width: 50%;
+
+        h2 {
+            @include h2();
+            text-align: left;
+        }
+
+        p {
+            @include paragraph();
+            padding: 40px 0;
+            line-height: 22px;
+        }
+
+        .line-red::after {
+            background-color: $color-red;   
+        }
+
+        .line-blue::after {
+            background-color: $color-blue;   
+        }
+
+        .line-green::after {
+            background-color: $color-green;   
+        }
+    }
+
+    .box-small {
+        margin: 30px 40px 30px 0;
+        width: calc(1352px - 540px - 40px);
+        
+        .box-text {
+            flex-grow: 0.6;
+        }
+    }
+
+    .box-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &:hover .picture {
+            transform: rotate(-7deg);
+            transition: transform 0.4s ease;
+        }
+    }
+
+    .picture {
+        width: 540px;
+        height: 370px;
+        background-color: #55DFB4;
+        border: 1px solid $color-border;
+        border-radius: 5px;
+        margin: 30px 0;
+        padding-top: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.4s ease;
+    }
+}
