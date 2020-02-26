@@ -18,18 +18,10 @@
 
     &:hover {
         transition: all 0.6s ease;
-        box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
         transform: translateY(-0.25em);
-        background-color: #0084C0;
         background-color: darken($color, 5%);
         box-shadow: 5px 10px 14px rgba(darken($color, 30%), 0.5);
     }
-}
-
-@mixin image {
-    max-width: 50%;
-    height: auto;
-    display: block;
 }
 
 @mixin h2 {

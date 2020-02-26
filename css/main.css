@@ -244,9 +244,7 @@ input, select {
 
 #banner-page .banner-details a:hover {
   transition: all 0.6s ease;
-  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
   transform: translateY(-0.25em);
-  background-color: #0084C0;
   background-color: #0794cb;
   box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
 }
@@ -398,9 +396,6 @@ input, select {
 }
 
 #benefits-page .iphone img {
-  max-width: 50%;
-  height: auto;
-  display: block;
   max-width: 40%;
 }
 
@@ -428,8 +423,6 @@ input, select {
 
 #benefits-page .macbook img {
   max-width: 50%;
-  height: auto;
-  display: block;
 }
 
 #benefits-page .macbook::after {
@@ -520,9 +513,6 @@ input, select {
 }
 
 #benefits-page .picture img {
-  max-width: 50%;
-  height: auto;
-  display: block;
   max-width: 70%;
 }
 
@@ -622,9 +612,7 @@ input, select {
 
 .pricing-box .red a:hover {
   transition: all 0.6s ease;
-  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
   transform: translateY(-0.25em);
-  background-color: #0084C0;
   background-color: #fa2250;
   box-shadow: 5px 10px 14px rgba(154, 3, 35, 0.5);
 }
@@ -682,9 +670,7 @@ input, select {
 
 .pricing-box .blue a:hover {
   transition: all 0.6s ease;
-  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
   transform: translateY(-0.25em);
-  background-color: #0084C0;
   background-color: #0794cb;
   box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
 }
@@ -736,9 +722,7 @@ input, select {
 
 .pricing-box .green a:hover {
   transition: all 0.6s ease;
-  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
   transform: translateY(-0.25em);
-  background-color: #0084C0;
   background-color: #40dbab;
   box-shadow: 5px 10px 14px rgba(25, 130, 97, 0.5);
 }
@@ -758,6 +742,47 @@ input, select {
 
 #contact-form .container div, #contact-form .container form {
   width: 49%;
+}
+
+#contact-form .questions h5 {
+  margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 46px;
+  font-weight: 400;
+}
+
+#contact-form .questions p:first-of-type {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 50px;
+}
+
+#contact-form #contact {
+  display: flex;
+  width: 100%;
+}
+
+#contact-form #contact div {
+  color: #A5A5A5;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+#contact-form #contact div:first-child::before {
+  content: url("../assets/MailIcon.svg");
+  margin-right: 10px;
+  align-items: center;
+}
+
+#contact-form #contact div:last-child::before {
+  content: url("../assets/PhoneIcon.svg");
+  margin-right: 10px;
+  align-items: center;
 }
 
 #contact-form form {
@@ -811,9 +836,7 @@ input, select {
 
 #contact-form form a:hover {
   transition: all 0.6s ease;
-  box-shadow: 0 0.5em 0.5em -0.4em var(--color-grey);
   transform: translateY(-0.25em);
-  background-color: #0084C0;
   background-color: #0794cb;
   box-shadow: 5px 10px 14px rgba(3, 58, 80, 0.5);
 }
@@ -901,51 +924,63 @@ label[for=consent]::before {
   background: #FFFFFF no-repeat center center url("../assets/Checkmark-form.svg");
 }
 
-#contact-form .questions h5 {
-  margin-bottom: 30px;
-  font-family: 'Raleway', sans-serif;
-  font-size: 46px;
-  font-weight: 400;
+@media (max-width: 1024px) and (min-width: 480px) {
+  #contact-form .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact-form .container div, #contact-form .container form {
+    width: 100%;
+  }
+  #contact-form .container form {
+    padding: 0 50px;
+  }
+  #contact-form .container .questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact-form #contact {
+    justify-content: center;
+    width: auto;
+    margin-bottom: 120px;
+  }
+  #contact-form #contact div {
+    margin: 0 20px;
+  }
 }
 
-#contact-form .questions p:first-of-type {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  color: black;
-  margin-bottom: 50px;
-}
-
-#contact-form #contact {
-  display: flex;
-  width: 100%;
-}
-
-#contact-form #contact div {
-  color: #A5A5A5;
-  font-size: 16px;
-  font-weight: 600;
-  margin-right: 20px;
-  display: flex;
-  align-items: center;
-}
-
-#contact-form #contact div:first-child::before {
-  content: url("../assets/MailIcon.svg");
-  margin-right: 10px;
-  align-items: center;
-}
-
-#contact-form #contact div:last-child::before {
-  content: url("../assets/PhoneIcon.svg");
-  margin-right: 10px;
-  align-items: center;
+@media (max-width: 480px) {
+  #contact-form .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact-form .container div, #contact-form .container form {
+    width: 100%;
+  }
+  #contact-form .container form {
+    padding: 0 20px;
+  }
+  #contact-form .container .questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact-form #contact {
+    justify-content: center;
+    flex-direction: column;
+    width: auto;
+    margin-bottom: 70px;
+  }
+  #contact-form #contact div {
+    margin: 0 20px;
+  }
 }
 
 #footer-page {
   background: #F7F7F7 0% 0% no-repeat padding-box;
   box-shadow: 0px -5px 40px #00000029;
-  height: 89px;
+  min-height: 89px;
 }
 
 #footer-page .container {
@@ -995,7 +1030,7 @@ label[for=consent]::before {
   max-width: 100%;
   width: 30px;
   height: 30px;
-  margin-left: 20px;
+  margin: 0 10px;
 }
 
 *, *::before, *::after {

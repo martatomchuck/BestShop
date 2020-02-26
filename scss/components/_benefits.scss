@@ -51,7 +51,6 @@
         z-index: 999;
 
         img {
-            @include image(); 
             max-width: 40%;
         }
 
@@ -79,7 +78,7 @@
         z-index: 999;
 
         img {
-            @include image();
+            max-width: 50%;
         }
 
         &::after {
@@ -165,7 +164,6 @@
         transition: transform 0.4s ease;
 
         img {
-            @include image();
             max-width: 70%;
         }
     }
