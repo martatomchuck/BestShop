@@ -16,11 +16,13 @@
         font-family: 'Raleway', sans-serif;
         font-size: 46px;
         font-weight: 400;
+        text-align: center;
     }
 
     p:first-of-type {
         @include paragraph();
         margin-bottom: 50px;
+        text-align: center;
     }
 }
 

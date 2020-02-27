@@ -26,6 +26,7 @@
         width: 100%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         &:hover span::after {
             width: 350px;
@@ -46,12 +47,14 @@
     .iphone {
         position: relative;
         display: flex;
-        justify-content: flex-end;
         padding-top: 20px;
         z-index: 999;
+        left: 100px;   
 
         img {
-            max-width: 40%;
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
         }
 
         &::after {
@@ -61,9 +64,9 @@
             height: 300px;
             border-radius: 50%;
             background-color: $color-blue;
-            position: relative;
+            position: absolute;
             z-index: -1;
-            left: -320px;
+            left: -20px;
             bottom: 10px;
             transition: all 900ms ease-in-out;
         }
@@ -73,12 +76,14 @@
     .macbook {
         position: relative;
         display: flex;
-        justify-content: center;
         padding-top: 20px;
         z-index: 999;
+        right: 200px;
 
         img {
-            max-width: 50%;
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
         }
 
         &::after {
@@ -90,15 +95,14 @@
             transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
             background-color: $color-red;
             position: absolute;
-            top: -40px;
-            right: 120px;
+            right: -50px;
             z-index: -1;
             transition: all 900ms ease-in-out;
         }
     }
 
     .box-text {
-        margin: 40px;
+        margin: 30px;
         width: 50%;
 
         h2 {
@@ -169,6 +173,151 @@
     }
 }
 
-@media (max-width: 1124px) {
+@media (max-width: 1200px) {
+    #benefits-page {
+        .macbook {
+            right: 120px;
+        }
+    }
+}
 
+@media (max-width: 1080px) {
+    #benefits-page {
+        .box {
+            height: 560px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .diverse {
+            flex-flow: column-reverse;
+        }
+
+        .box-text {
+            margin: 0 10px;
+            padding-top: 10px;
+            width: 80%;
+        }
+
+        .macbook {
+            right: 0;
+    
+            img {
+                width: 250px;
+                height: 250px;
+                object-fit: contain;
+            }
+
+            &::after {
+                width: 10em;
+                height: 10em;
+            }
+        }
+
+        .iphone {
+            left: 20px;  
+            width: 100%; 
+    
+            img {
+                width: 250px;
+                height: 250px;
+                object-fit: contain;
+            }
+    
+            &::after {
+                width: 250px;
+                height: 250px;
+                bottom: 10px;
+            }
+        }
+
+        .box-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .box-small {
+            margin: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        .picture {
+            width: 100%;
+            height: 300px;
+            padding-top: 70px;
+    
+            img {
+                max-width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    #benefits-page {
+        .box {
+            height: 600px;
+        }
+
+        .box-text {
+            margin: 0 10px;
+            padding-top: 10px;
+            width: 80%;
+        }
+
+        .macbook {
+            right: 20px;
+    
+            img {
+                width: 200px;
+                height: 200px;
+                object-fit: contain;
+            }
+
+            &::after {
+                width: 8em;
+                height: 8em;
+            }
+        }
+
+        .iphone {
+            left: 0;  
+            width: 100%; 
+    
+            img {
+                width: 180px;
+                height: 180px;
+                object-fit: contain;
+            }
+    
+            &::after {
+                width: 180px;
+                height: 180px;
+                bottom: 10px;
+            }
+        }
+
+        .box-small {
+            margin: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        .picture {
+            padding-top: 50px;
+    
+            img {
+                max-width: 70%;
+            }
+        }
+
+        span::after {
+            width: 50%;
+            transition: none;
+        }
+    }
 }
