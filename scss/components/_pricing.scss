@@ -17,8 +17,10 @@
 
     .box {
         border-radius: 18px;
-        width: 372px;
+        min-width: 372px;
+        // width: auto;
         height: 500px;
+        padding: 0 60px;
         margin: 30px;
         transition: box-shadow 0.8s ease;
         display: flex;
@@ -129,5 +131,14 @@
         &:hover {
             @include box-shadow($color-green);
         }
+    }
+}
+
+@media (max-width: 900px) {
+    .pricing-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
     }
 }

@@ -538,8 +538,9 @@ input, select {
 
 .pricing-box .box {
   border-radius: 18px;
-  width: 372px;
+  min-width: 372px;
   height: 500px;
+  padding: 0 60px;
   margin: 30px;
   transition: box-shadow 0.8s ease;
   display: flex;
@@ -730,6 +731,15 @@ input, select {
 .pricing-box .green:hover {
   box-shadow: 5px 10px 20px -10px #55DFB4;
   transition: box-shadow 0.5s ease;
+}
+
+@media (max-width: 900px) {
+  .pricing-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 #contact-form .container {
