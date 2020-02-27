@@ -408,7 +408,7 @@ input, select {
   background-color: #08A6E4;
   position: relative;
   z-index: -1;
-  left: -340px;
+  left: -320px;
   bottom: 10px;
   transition: all 900ms ease-in-out;
 }
@@ -538,7 +538,6 @@ input, select {
 
 .pricing-box .box {
   border-radius: 18px;
-  min-width: 372px;
   height: 500px;
   padding: 0 60px;
   margin: 30px;
@@ -583,6 +582,7 @@ input, select {
 
 .pricing-box .red {
   border: 1px solid #FB3B64;
+  flex-grow: 1;
 }
 
 .pricing-box .red h4 {
@@ -683,6 +683,7 @@ input, select {
 
 .pricing-box .green {
   border: 1px solid #55DFB4;
+  flex-grow: 1;
 }
 
 .pricing-box .green h4 {
@@ -733,12 +734,30 @@ input, select {
   transition: box-shadow 0.5s ease;
 }
 
+@media (max-width: 1280px) and (min-width: 900px) {
+  .pricing-box .box {
+    min-width: auto;
+    width: auto;
+    padding: 0 10px;
+    margin: 20px;
+  }
+}
+
 @media (max-width: 900px) {
   .pricing-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+  }
+  .pricing-box .box {
+    padding: 0 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing-box .box {
+    padding: 0 50px;
   }
 }
 

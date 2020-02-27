@@ -63,7 +63,7 @@
             background-color: $color-blue;
             position: relative;
             z-index: -1;
-            left: -340px;
+            left: -320px;
             bottom: 10px;
             transition: all 900ms ease-in-out;
         }
@@ -167,4 +167,8 @@
             max-width: 70%;
         }
     }
+}
+
+@media (max-width: 1124px) {
+
 }

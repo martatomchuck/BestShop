@@ -17,8 +17,6 @@
 
     .box {
         border-radius: 18px;
-        min-width: 372px;
-        // width: auto;
         height: 500px;
         padding: 0 60px;
         margin: 30px;
@@ -65,6 +63,7 @@
 .pricing-box {
     .red {
         border: 1px solid $color-red;
+        flex-grow: 1;
 
         h4 {
             color: $color-red;
@@ -113,6 +112,7 @@
 
     .green {
         border: 1px solid $color-green;
+        flex-grow: 1;
 
         h4 {
             color: $color-green;
@@ -134,11 +134,30 @@
     }
 }
 
+@media (max-width: 1280px) AND (min-width: 900px) {
+    .pricing-box .box {
+        min-width: auto;
+        width: auto;
+        padding: 0 10px;
+        margin: 20px;
+    }
+}
+
 @media (max-width: 900px) {
     .pricing-box {
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
+
+        .box {
+            padding: 0 110px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-box .box {
+        padding: 0 50px;
     }
 }
